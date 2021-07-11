@@ -1,3 +1,7 @@
 {
-    "prefix": "!"
+    "prefix": "bb/",
+    "commands":{
+        "help": ["help", "h"],
+        "info": ["info", "i", "!"]
+    }
 }

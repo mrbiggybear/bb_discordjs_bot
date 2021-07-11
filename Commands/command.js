@@ -1,21 +1,21 @@
-const {prefix} = require('../config.json');
+const { prefix } = require("../config.json");
 
 module.exports = (client, aliases, callback) => {
+  if (typeof aliases === "string") {
+    aliases = [aliases];
+  }
+// capture message
+  client.on("message", (message) => {
+    const { content } = message;
 
-    if(typeof aliases === 'string'){
-        aliases = [aliases];
-    }
+    aliases.forEach((alias) => {
+        // check aliases here
+      const command = `${prefix}${alias}`;
 
-    client.on('message', message => {
-        const {content} = message;
-
-        aliases.forEach(alias => {
-            const command = `${prefix}${alias}`
-
-            if(content.startsWith(`${command}`) || content === command){
-                console.log(`Running the command ${command}`)
-                callback(message);
-            }
-        });
+      if (content.includes(`${command}`) || content === command && content.toLower() == "!ping" ) {
+        console.log(`Running the command ${command}`);
+        callback(message);
+      }
     });
+  });
 };

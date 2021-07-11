@@ -1,11 +1,11 @@
 {
-  "name": "appa_bot",
+  "name": "bb/ot",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
-    "install_dep": "npm install discord.js; npm install dotenv",
-    "run":"node app.js",
+    "install_dep": "npm install discord.js && npm install dotenv",
+    "run": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
