@@ -11,6 +11,7 @@ console.log(commandFiles);
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
+	console.log(command);
 	commands.push(command.data.toJSON());
 }
 
@@ -21,12 +22,12 @@ console.log(rest);
 (async () => {
 	try {
 		console.log('Started refreshing application (/) commands.');
-		console.log(commands);
+		console.log({"commands" : commands});
 
 		// ToDo: this put request fails
 		await rest.put(
 			Routes.applicationCommands(clientId),
-			{ body: {} },
+			{ body: commands },
 		);
 
 		console.log('Successfully reloaded application (/) commands.');

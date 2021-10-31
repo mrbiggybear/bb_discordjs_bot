@@ -1,0 +1,13 @@
+{
+  "clientId": "863235971230072844",
+  "clientSecret": "L801qUg8AdsiZRvoF4ZRC37Ic__DZmCO",
+  "guildId": "620866382833123328",
+  "app": {
+    "public_key": "63ef15dfc09033d078199b7ff65cea2c9c83dfeb8955521f58d70588a54b6f16"
+  },
+  "bot": {
+    "name": "big_brother",
+    "token": "ODYzMjM1OTcxMjMwMDcyODQ0.YOj9JQ.McyqsPxFQvl1vdVh4MyFofo3ZnE",
+    "permissions": "8"
+  }
+}
